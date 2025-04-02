@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEA'S THREE IDIOTS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: black;
+            text-align: center;
+            background: #f4f4f4;
+        }
+
+        .background {
+            background-image: url('photos/PARASACOMRPOG\ BG.jpg'); 
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(255,255,255,0.6);
+            background-blend-mode: lighten;
+        }
+
+        .parallax {
+            height: 300px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            color: rgb(9, 35, 51);
+            font-size: 32px;
+            text-shadow: 5px 3px 25px rgba(2, 45, 72, 0.5);
+        }
+
+        header {
+            background: linear-gradient(to left, rgb(82,148,189), rgb(144,213,255), rgb(82,148,189) );
+            color: white;
+            padding: 20px;
+            font-family: "Pacifico", cursive;
+            font-size: 28px;
+            font-weight: 500;
+            text-align: left;
+            letter-spacing: 3px;
+        }
+
+        .intro-text {
+            display: flex;
+            margin-left: 15%;
+            margin-right: 15%;
+            justify-content: center; 
+            margin-top: 20px;
+            font-size: 24px;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            align-items: stretch;
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .description {
+            font-size: 18px;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 30px;
+        }
+
+        .person {
+            flex: 1 1 220px; 
+            max-width: 250px;
+            display: flex;
+            flex-direction: column; 
+            justify-content: space-between; 
+            padding: 15px;
+            border: 2px solid black;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .person:hover {
+            transform: scale(1.1);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .person img {
+            align-self: center;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .person h2 {
+            text-emphasis: none;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .person p {
+            font-style: italic;
+            font-size: 14px;
+            color: #555;
+        }
+
+        footer {
+            background: linear-gradient(to left,rgb(82,148,189), rgb(144,213,255), rgb(82,148,189) );
+            color: rgb(255, 246, 246);
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        The Three Idiots
+    </header>
+
+    <div class="background">
+        <div class="parallax">
+            Welcome to the THREE IDIOTS WEBSITE
+        </div>
+    
+        <!-- Intro Text -->
+        <div class="intro-text">
+            We are a group of civil engineering students navigating the challenges of academics with teamwork, dedication, and enjoyment. Join us as we share our online portfolio.
+        </div>
+    
+        <div class="container">
+            <div class="person">
+                    <img src="photos/MIGUEL.jpg" alt="Jan Miguel Vacunawa">
+                </a>
+                <h2>Jan Miguel Vacunawa</h2>
+                <p>"People come and please clean as you go."</p>
+            </div>
+    
+            <div class="person">
+                    <img src="photos/Zhaher Baluyot Liam.jpg" alt="Zhaher Liam">
+                </a>
+                <h2><a href="zhaher.html" target="_blank" text-decoration: none; color: maroon;>Zhaher B. Liam</a></h2>
+                <p>"Buti pa ang sinaing binabantayan, binabalikan, hindi iniiwan."</p>
+            </div>
+    
+            <div class="person">
+                    <img src="photos/ANTHONY.jpg" alt="Anthony Punzalan">
+                </a>
+                <h2>Anthony Punzalan</h2>
+                <p>"Let the pain teach you how to dougie."</p>
+            </div>
+        </div>
+    
+        <footer>
+            <p>OUR VERY OWN WEBSITE</p>
+            <p>Collaborative Learning Exercise (COMPUTER FUNDAMENTALS & PROGRAMMING) | BSCE – 1C</p>
+        </footer>
+    </div>
+    <!-- Parallax Effect -->
+    
+
+</body>
+</html>

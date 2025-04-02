@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Zhaher Liam">
+    <title>About Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+
+      /*navigation*/
+      @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+        * {
+          margin: 0;
+          padding: 0;
+        }
+
+        .logo {
+          font-family: "Pacifico", cursive;
+          font-size: 30px;
+          color:  rgb(82, 148, 189); 
+          white-space: nowrap; 
+          vertical-align:middle;
+          margin-right: 50px;
+        }
+
+        .logo:hover {
+          cursor: default;
+        }
+
+        hr {
+          border-top: 1px dotted rgb(144, 213, 255);
+        }
+
+        nav, .nav-links {
+          display: flex;
+        }
+
+        nav {
+          justify-content: space-around;
+          align-items: center;
+          height: 80px;
+          min-width: 750px;
+        }
+
+        .nav-links {
+          gap: 30px;
+          list-style: none;
+          font-size: 17px;
+          display: flex;
+          align-items: center;
+          white-space: nowrap;
+        }
+
+        .nav-links li {
+          display: flex;
+          align-items: center;
+        }
+
+        .nav-links li a {
+          font-family: "Poppins", sans-serif;
+          color: black;
+          text-decoration: none;
+          transition: opacity 0.2s ease-in-out, background 0.3s ease-in-out;
+          padding: 5px 10px;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+        }
+
+        .nav-links li a:hover{ 
+            opacity: 0.8;
+            background: linear-gradient(to bottom, rgb(82, 148, 189) 34%, rgb(144, 213, 255) 100%);
+        }
+
+        .nav-links li a:focus {
+          opacity: 0.9;
+          background: linear-gradient(to bottom, rgb(82, 148, 189) 34%, rgb(144, 213, 255) 100%);
+          border-bottom: 3px solid rgb(82, 148, 189);
+          outline-offset: -3px;
+        }
+
+        .nav-links li img {
+          width: 24px; 
+          display: block;
+        }
+
+      /*index styles*/
+      body {
+      text-align: justify;
+      font-family: "Poppins", sans-serif;}
+
+      .profile {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0px; 
+          padding: 5vh 10vw; 
+          min-height: fit-content;
+          flex-wrap: wrap;
+      }
+
+          .image-container {
+              flex: 0.7;
+              display: flex;
+              justify-content: center;
+          }
+
+          .image-container img {
+              border-radius: 50%;
+              border: 2px  solid rgb(144, 213, 255);
+              width: 400px;
+              height: 400px;
+              object-fit: cover;
+          }
+
+          .image-container img:hover{
+              box-shadow: 0px 8px 20px rgba(144, 213, 255, 0.5);
+          }
+    
+    .intro {
+        flex: 1; 
+        text-align: center; 
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        width: 590px;
+        min-width: 300px; 
+    }
+
+    .intro-text {
+        font-size: 28px;
+        background: linear-gradient(to bottom, rgb(82, 148, 189) 34%, rgb(144, 213, 255) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0;
+    }
+
+
+    .intro-name {
+        font-size: 48px;
+        transition: font-size 0.2s ease-in-out;
+    }
+
+    .intro-name:hover {
+        font-size: 50px;
+        background: linear-gradient(to bottom, rgb(82, 148, 189) 34%, rgb(144, 213, 255) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .intro-section{
+        background: linear-gradient(to bottom, rgb(82, 148, 189) 34%, rgb(144, 213, 255) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+      .content {
+          background-color: rgb(82, 148, 189); 
+          padding: 40px 80px; 
+          margin: 20px auto;
+          max-width: 80%;
+          border-radius: 20px; 
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); 
+          transition: color 0.15s;
+      }
+
+      .content:hover{ 
+        background-color:#fae9d2;
+        color: rgb(82, 148, 189);
+        border-color:rgb(82, 148, 189);
+        border-style: solid;
+        border-width: 2px;}
+
+      .title {
+          font-weight: 700;
+          text-align: center;
+          margin-bottom: 3%;
+          margin: top 2.5%;
+      }
+
+      .description{
+          text-indent: 50px;
+      }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(144, 213, 255); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(144, 213, 255); 
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navigation">
+        <div class="logo">Calculus Guy</div>
+        <div> 
+         <ul class="nav-links">
+           <li><a href="index.html">Go Back</a></li>
+           <li><a href="zhaher.html">About Me</a></li>
+           <li><a href="myfamily.html">Family</a></li>
+           <li><a href="mylikes.html">Likes</a></li>
+           <li><a href="myfriends.html">Friends</a></li>
+           <li><a href="myachievements.html">Achievements</a></li>
+         </ul>
+        </div>
+    </nav>
+    <hr>
+        <section class="profile">
+            <div class="image-container">
+                <img src="photos/Zhaher Baluyot Liam.jpg" alt="My Picture">
+            </div>
+            <div class="intro">
+            <p class="intro-text">Hello, I'm</p>
+            <h3 class="intro-name">Zhaher B. Liam</h3>
+            <p class="intro-section">from BSCE-1C</p> 
+            </div>   
+        </section>
+
+        <section class="content">
+            <div class="title">
+                <h1>About Me</h1>
+            </div>
+            <div class="description">
+                <p>Hi! My name is Zhaher B. Liam, and I have a unique name that is not common to most people, which is “Zhaher”. At the same time, its pronunciation is way different from how it looks; it is pronounced as “Za-hir”. Interestingly, my parents decided to use this because of the qualities of the boss my father had when he was in Saudi Arabia. He said that his boss was smart, gentle, and kind. His real name was Zahir Muhammad Ali, and my parents just added some of their personal touch leading to my first name.</p>
+                <br>
+                <p>Moreover, I can understand how others might perceive me. I'm between introverted and extroverted, well, depending on the people I am with. I only have a small circle of friends, and I am a person who always has his pen and paper anytime and anywhere. In terms of preference and style, I am not really into fashion; I mostly wear white t-shirts, a pair of shorts, and a pair of slippers. In addition, I hate having long hair because I don’t like the feeling of my hair touching my skin, and it’s hot here in the Philippines, so I always choose to have a student haircut.</p>
+                <br>
+                <p>Currently, I am a first-year Bachelor of Science in Civil Engineering (BSCE) student at Bataan Peninsula State University (BPSU) - Main Campus. I do have a college that offers engineering in my hometown, but I decided to leave because I want to experience being independent and, at the same time, go to a new environment. Moreover, I passed the DOST-SEI Scholarship Examination. I can only use my scholarship when I am enrolled in such universities that are accredited by DOST or State Universities. Since the college in my hometown is not accredited, I have no choice but to go to BPSU.</p>
+                <br>
+                <p>When it comes to my interests, I enjoy playing piano and solving mathematical problems. Moreover, when it's my leisure time, I usually do gardening and cooking. Being an engineering student is no joke, you have to take the pressure and, at the same time, the expectations of the people to you. But I am starting to like it because I have a high aptitude for science and mathematics. At the same time, I like doing things that are related to my program which is civil engineering.
+                </p>
+                <br>
+                <p>Last but never the least, I wish for a beautiful life, a life that will pay off my hardwork and the efforts that my parents had done to me. I like to visit countries like Japan, Canada, South Korea and one of them would be my new home together with my parents. I may not have told everything, but for now, my main goal is to enjoy and embrace life. I want to finish my college degree and make my family and myself proud.
+                </p>
+            </section>
+</body>
+</html>

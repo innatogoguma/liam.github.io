@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Zhaher B. Liam">
+    <title>My Likes</title>
+    <link rel="icon" type="image/x-icon" href="Photos/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/header-style.css">
+    <link rel="stylesheet" href="Styles/scroll-bar.css">
+    <link rel="stylesheet" href="Styles/likes.css">
+    <style>
+         /*navigation*/
+      @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.logo {
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+  color:  rgb(82, 148, 189); 
+  white-space: nowrap; 
+  vertical-align:middle;
+  margin-right: 50px;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+hr {
+  border-top: 1px dotted rgb(144, 213, 255);
+}
+
+nav, .nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  min-width: 750px;
+}
+
+.nav-links {
+  gap: 30px;
+  list-style: none;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li a {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  text-decoration: none;
+  transition: opacity 0.2s ease-in-out, background 0.3s ease-in-out;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li a:hover{ 
+    opacity: 0.8;
+    background: linear-gradient(to bottom, rgb(82, 148, 189) 34%, rgb(144, 213, 255) 100%);
+}
+
+.nav-links li a:focus {
+  opacity: 0.9;
+  background: linear-gradient(to bottom, rgb(82, 148, 189) 34%, rgb(144, 213, 255) 100%);
+  border-bottom: 3px solid rgb(82, 148, 189);
+  outline-offset: -3px;
+}
+
+.nav-links li img {
+  width: 24px; 
+  display: block;
+}
+
+/*index styles*/
+body {
+text-align: justify;
+font-family: "Poppins", sans-serif;}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px; 
+  padding: 5vh 10vw; 
+  min-height: fit-content;
+  flex-wrap: wrap;
+}
+
+  .image-container {
+      flex: 0.7;
+      display: flex;
+      justify-content: center;
+  }
+
+  .image-container img {
+      border-radius: 50%;
+      border: 2px  solid rgb(144, 213, 255);
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+  }
+
+  .image-container img:hover{
+      box-shadow: 0px 8px 20px rgba(144, 213, 255, 0.5);
+  }
+
+.intro {
+flex: 1; 
+text-align: center; 
+font-weight: 600;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center; 
+width: 590px;
+min-width: 300px; 
+}
+
+.intro-text {
+font-size: 28px;
+background: linear-gradient(to bottom, rgb(82, 148, 189) 34%, rgb(144, 213, 255) 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin-bottom: 0;
+}
+
+
+.intro-name {
+font-size: 48px;
+transition: font-size 0.2s ease-in-out;
+}
+
+.intro-name:hover {
+font-size: 50px;
+background: linear-gradient(to bottom, rgb(82, 148, 189) 34%, rgb(144, 213, 255) 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.intro-section{
+background: linear-gradient(to bottom, rgb(82, 148, 189) 34%, rgb(144, 213, 255) 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.content {
+  padding: 40px 80px; 
+  margin: 20px auto;
+  max-width: 80%;
+}
+
+.content:hover{ 
+  color: rgb(82, 148, 189);
+}
+
+.title {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3%;
+  margin: top 2.5%;
+}
+
+.description{
+  text-indent: 50px;
+}
+
+/* width */
+::-webkit-scrollbar {
+width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: rgb(144, 213, 255); 
+border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: rgba(144, 213, 255); 
+}
+/* General Styles */
+body {
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdf6f6;
+}
+
+/*Text*/
+.my-likes {
+  text-align: center;
+  padding: 20px;
+}
+
+.title { 
+  display: block;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+.title:hover {
+  background: linear-gradient(to bottom,rgb(82, 148, 189) 34%, rgb(144, 213, 255) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*Content Div*/
+.content{
+  border-top: 3px solid rgb(82, 148, 189);
+  padding-bottom: 50px;
+}
+.content-title {
+  text-align: center;
+  padding-top: 6%;
+  background: linear-gradient(to bottom, rgb(82, 148, 189) 34%, rgb(144, 213, 255) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+/*Content Styles*/
+.likes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.image-container img {
+  transform: scale(1.05);
+  max-width: 735px;
+  object-fit: cover;
+  box-shadow: 0px 8px 20px rgba(83, 37, 52, 0.5);
+}
+
+.name {
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+/* Description */
+.description {
+  display: flex;
+  flex: 1;
+  font-size: 18px;
+  color: #333;
+}
+
+.description {
+  display: block; /* proper paragraph formatting*/
+  text-align: justify;
+  text-indent: 50px;
+  margin-top: 5px;
+  margin: 0 auto; /* centers the text */
+  max-width: 700px; /* limits width for better readability */
+  padding: 0 8%; /* spacing adjustments*/
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    padding: 20px 40px;
+    max-width: 95%;
+  }
+
+  .description {
+    text-align: justify;
+    padding: 0 8%; /* reduces side padding for smaller tab/window view*/
+  }
+}
+    </style>
+</head>
+<body>
+    <nav class="navigation">
+      <div class="logo">Calculus Guy</div>
+      <div> 
+      <ul class="nav-links">
+        <li><a href="index.html">Go Back</a></li>
+        <li><a href="zhaher.html">About Me</a></li>
+        <li><a href="myfamily.html">Family</a></li>
+        <li><a href="mylikes.html">Likes</a></li>
+        <li><a href="myfriends.html">Friends</a></li>
+        <li><a href="myachievements.html">Achievements</a></li>
+      </ul>
+      </div>
+    </nav>
+    <hr>
+    <div class="my-likes">
+        <h1 class="title">My Likes</h1>
+        
+        <div class="content">
+          <h2 class="content-title">My Usual Hobbies and Favorite Artist</h2>
+          
+          <div class="likes">
+            <div class="image-container">
+                <img src="photos/KEYBOARD.jpg" alt="My Keyboard (Musical Instrument)"> 
+            </div>
+            <div class="name">
+              <h2>Playing Keyboard</h2>
+            </div>
+            <div class="description"> 
+              <p>I started playing the keyboard when I was in 5th grade. I’m not bragging, but I could learn it faster than other kids back then, so I started studying music pieces through synthesia. Moreover, I am not into pop music or contemporary music; classical music has my heart. So, for 8 consecutive years, I have been playing musical pieces of Mozart, Beethoven, Liszt, Bach, etc. Playing the keyboard is a way of expressing myself musically, not just a pastime. It enables me to convert my feelings into sound, whether I'm learning a new piece, improvising melodies, or just playing to relax.</p>
+            </div>
+          </div>
+  
+          <div class="likes">
+            <div class="image-container">
+                <img src="photos/FOOD.jpg" alt="Food I made"> 
+            </div>
+            <div class="name">
+              <h2>Cooking</h2>
+            </div>
+            <div class="description"> 
+              <p>Pardon me for the picture, I used my output in T.L.E because I don’t have any recent pictures of the dishes I made. Nevertheless, I really love cooking. It is something I picked up from my parents, who could turn the simplest ingredients into the most comforting meals. Their love for cooking inspired me to experiment in the kitchen, finding joy in creating dishes that bring warmth to those around me.</p> 
+            </div>
+          </div>
+  
+          <div class="likes">
+            <div class="image-container">
+                <img src="photos/CALCULUS.jpg" alt="Calculus Works">            
+            </div>
+            <div class="name">
+              <h2>Solving Math Problems</h2>
+            </div>
+            <div class="description"> 
+              <p>Math may be the most hated subject for everyone, but for me, it is the most interesting. I genuinely enjoy dealing with mathematical problems since it tests my logic and enhances my critical thinking skills. Whether it's solving difficult problems or figuring out the most effective methods, I adore the structure and logic that go into mathematical ideas, especially in Calculus. I love solving derivatives and integrals, and I even came up with my own techniques for solving.</p>      
+            </div>
+          </div>
+          
+        <div class="likes">
+          <div class="image-container">
+              <img src="photos/MOZART.jpg" alt="Mozart">           
+          </div>
+          <div class="name">
+            <h2>Wolfgang Amadeus Mozart</h2>
+          </div>
+          <div class="description"> 
+            <p>Mozart is my number one music artist. I like how his songs strike a balance between emotion and accuracy. I'm always fascinated by his music, whether it's the depth of his operas, the beauty of his piano pieces, or the genius of his symphonies.  A trip into one of the greatest composers in history is what listening to Mozart is about.</p>      
+          </div>
+        </div>
+      </div>
+</body>
+</html>
